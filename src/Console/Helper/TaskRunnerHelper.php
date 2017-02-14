@@ -107,10 +107,6 @@ class TaskRunnerHelper extends Helper
             $output->writeln('<fg=red>' . $errorMessage . '</fg=red>');
         }
 
-        $output->writeln(
-            '<fg=yellow>To skip commit checks, add -n or --no-verify flag to commit command</fg=yellow>'
-        );
-
         return self::CODE_ERROR;
     }
 
