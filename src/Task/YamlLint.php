@@ -4,19 +4,16 @@ namespace GrumPHP\Task;
 
 use GrumPHP\Exception\RuntimeException;
 use GrumPHP\Runner\TaskResult;
-use GrumPHP\Linter\Yaml\YamlLinter;
 use GrumPHP\Task\Context\ContextInterface;
 use GrumPHP\Task\Context\GitPreCommitContext;
 use GrumPHP\Task\Context\RunContext;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+/**
+ * @property \GrumPHP\Linter\Yaml\YamlLinter $linter
+ */
 class YamlLint extends AbstractLinterTask
 {
-    /**
-     * @var YamlLinter
-     */
-    protected $linter;
-
     /**
      * @return string
      */
